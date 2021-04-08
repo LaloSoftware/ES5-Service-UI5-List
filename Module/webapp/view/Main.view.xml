@@ -1,9 +1,15 @@
-<mvc:View controllerName="ns.Module.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ns.Module.controller.Main" displayBlock="true">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<content></content>
+					<content>
+					    <List id="list" items="{/ProductSet}">
+                            <ObjectListItem type="Navigation" title="{Name}" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" cd:w5g.dt.context="/ProductSet" number="{Price}" numberUnit="{ProductID}">
+				                
+			                </ObjectListItem>
+                        </List>
+					</content>
 				</Page>
 			</pages>
 		</App>
