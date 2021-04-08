@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run demosap",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/demosap-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/nsModule/index.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "cwd": "${workspaceFolder}/Module",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/demosap/Module\"}"
+      },
+      "envFile": "${workspaceFolder}/Module/.env1",
+      "preLaunchTask": "Build demosap"
+    }
+  ]
+}
